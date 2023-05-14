@@ -14,11 +14,11 @@ int main()
     pthread_t thread_id[10];
     int i;
 
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 2; i++) {
         pthread_create(&thread_id[i], NULL, thread_func, NULL);
     }
 
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 2; i++) {
         pthread_join(thread_id[i], NULL);
     }
 
@@ -28,12 +28,12 @@ int main()
 void *thread_func(void *arg)
 {
     while (syscall(335, &spinlock)) {
-        // spin until lock is acquired
+        
     }
 
     printf("Thread %ld acquired the spinlock\n", syscall(SYS_gettid));
 
-    // perform some operations here
+    syscall(336, &spinlock);
    
     printf("Thread %ld released the spinlock\n", syscall(SYS_gettid));
 
