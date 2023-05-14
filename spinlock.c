@@ -8,7 +8,7 @@
 #define SPINLOCK_LOCKED 1
 void *thread_func(void *arg);
 static unsigned int spinlock = SPINLOCK_INIT;
-void *thread_func(void *arg);
+
 int main()
 {
     pthread_t thread_id[10];
