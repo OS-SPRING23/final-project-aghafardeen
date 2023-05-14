@@ -18,6 +18,9 @@ asmlinkage long sys_spinlock(unsigned int *lock)
 
     struct mutex *mutex = (struct mutex *) lock;
     mutex_lock(mutex);
+    
+    
+     mutex_unlock(mutex);
 
     return 0;
 }
