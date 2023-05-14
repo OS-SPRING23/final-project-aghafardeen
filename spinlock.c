@@ -34,8 +34,7 @@ void *thread_func(void *arg)
     printf("Thread %ld acquired the spinlock\n", syscall(SYS_gettid));
 
     // perform some operations here
-
-    //syscall(335, &spinlock);
+   
     printf("Thread %ld released the spinlock\n", syscall(SYS_gettid));
 
     pthread_exit(NULL);
