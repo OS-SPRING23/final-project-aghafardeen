@@ -46,6 +46,7 @@ By incorporating spinlocks into system calls, the following benefits can be achi
 Platform:
 
 Linux: The Linux operating system provides a rich set of system calls and synchronization primitives, including spinlocks. In Linux, system calls can be implemented using the C programming language. The Linux kernel provides spinlock implementations, such as the spinlock_t structure, which can be used in system call imple-mentations.
+
 Languages:
 We have used C language because of its low-level capabilities and direct interaction with the operating system, other languages can also be utilized.
 
